@@ -6,6 +6,9 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
+//compileJava.options.fork = true
+//compileJava.options.forkOptions.executable = '/usr/lib/jvm/java-17/bin/java'
+
 repositories {
     mavenCentral()
 }
@@ -14,7 +17,13 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot:3.0.4'
     implementation 'org.springframework.boot:spring-boot-starter:3.0.4'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb:3.0.5'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:3.1.0'
+//    implementation 'org.springframework:spring-web:6.0.9'
 
+
+
+    compileOnly 'org.projectlombok:lombok:1.18.26'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test:3.0.4'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
